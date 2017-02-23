@@ -79,19 +79,6 @@ public class TestWalk {
         System.out.println("Walk2 MAX: " + walk2.getMaxDistance() + "\n");
 
 
-
-
-
-//        // RandomWalk method 'walk' test
-//        System.out.println("---Test of Walk-method---");
-//        for (int i = 0; i < 5; i++) {
-//            System.out.println("Walk test #" + i);
-//            RandomWalk walk3 = new RandomWalk(10, 200);
-//            walk3.walk();
-//            System.out.println(walk3.toString());
-//        }
-//        
-        
         
         
         

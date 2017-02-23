@@ -12,7 +12,7 @@ import java.util.Random;
  * @author maria
  */
 public class RandomWalk {
-    
+
     private int x;
     private int y;
     private int max;
@@ -38,16 +38,12 @@ public class RandomWalk {
         steps = 0;
         maxDistance = 0;
     }
-    
-    
-    
-     /**
+
+    /**
      * Generates a pseudo-random value and changes the objects' coordinates accordingly
      */
     public void takeStep() {
 
-        //Generates a new random integer between 0 - 4
-        //Depending on the integer, add or substract 1 from x or y
         Random ran = new Random();
         int step = ran.nextInt(4);
 
@@ -73,16 +69,13 @@ public class RandomWalk {
                 break;
         }
 
-        //Increments steps
         steps = steps + 1;
-   
+
         //Update max distance to the greatest number
         //Values are current Max Distance and current distance from origin
         maxDistance = max(maxDistance, (Math.max(Math.abs(x), Math.abs(y))));
 
     }
-    
-    
 /**
  * Support method. Compares two numbers and returns the greatest value
  * Values: Previous maxDistance, Current Distance from origin
@@ -101,8 +94,20 @@ public class RandomWalk {
 
         return biggest;
     }
+
+    /**
+     * Simulates a full random walk that continues for as long as the walk is within bounds and has more steps
+     */
+    public void walk() {
+
+        while (moreSteps() == true && inBounds() == true) {
+            takeStep();
+        }
+    }
+
     
-       /**
+    
+    /**
      * Returns true if maximum numbers of steps have been reached
      * @return 
      */
@@ -132,19 +137,8 @@ public class RandomWalk {
 
         return returnBool;
     }
-    
-    
-     /**
-     * Simulates a full random walk that continues for as long as the walk is within bounds and has more steps
-     */
-    public void walk() {
 
-        while (moreSteps() == true && inBounds() == true) {
-            takeStep();
-        }
-    }
-    
-      public int getX() {
+    public int getX() {
         return x;
     }
 
@@ -152,12 +146,11 @@ public class RandomWalk {
         return y;
     }
 
-      public int getMaxDistance() {
+    public int getMaxDistance() {
 
         return maxDistance;
     }
 
-    
     public String toString() {
         String stringReturn = "";
 
