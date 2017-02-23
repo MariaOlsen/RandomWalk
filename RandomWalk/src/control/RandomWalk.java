@@ -75,9 +75,32 @@ public class RandomWalk {
 
         //Increments steps
         steps = steps + 1;
-        
+   
+        //Update max distance to the greatest number
+        //Values are current Max Distance and current distance from origin
+        maxDistance = max(maxDistance, (Math.max(Math.abs(x), Math.abs(y))));
+
     }
     
+    
+/**
+ * Support method. Compares two numbers and returns the greatest value
+ * Values: Previous maxDistance, Current Distance from origin
+ * @param num1
+ * @param num2
+ * @return 
+ */
+    private int max(int num1, int num2) {
+        int biggest = 0;
+
+        if (num1 > num2) {
+            biggest = num1;
+        } else {
+            biggest = num2;
+        }
+
+        return biggest;
+    }
     
        /**
      * Returns true if maximum numbers of steps have been reached
@@ -129,7 +152,11 @@ public class RandomWalk {
         return y;
     }
 
-    
+      public int getMaxDistance() {
+
+        return maxDistance;
+    }
+
     
     public String toString() {
         String stringReturn = "";
