@@ -69,36 +69,45 @@ public class TestWalk {
 //            walk2.takeStep();
 //            System.out.println("\nNew walk2 position: " + walk2.toString());
 //        }
+//
+//        // RandomWalk method 'walk' test
+//        System.out.println("---Test of Walk-method---");
+//        for (int i = 0; i < 5; i++) {
+//            System.out.println("Walk test #" + i);
+//            RandomWalk walk3 = new RandomWalk(10, 200);
+//            walk3.walk();
+//            System.out.println(walk3.toString());
+//        }
+//        
+        
+        
+        
+        
+//         //#8) Drunken Walks Test
+//        System.out.println("\nDrunken Walks");
+//        System.out.println("\n-----\t Drunk1 \t-----");
+//        DrunkenWalk drunk1 = new DrunkenWalk(10, 200, 30);
+//        drunk1.drunkWalks();
+//        System.out.println(drunk1.toString());
+//
+//        System.out.println("\n-----\t Drunk2 \t-----");
+//        DrunkenWalk drunk2 = new DrunkenWalk(10, 500, 30);
+//        drunk2.drunkWalks();
+//        System.out.println(drunk2.toString());
+//
+//        System.out.println("\n-----\t Drunk3 \t-----");
+//        DrunkenWalk drunk3 = new DrunkenWalk(50, 200, 30);
+//        drunk3.drunkWalks();
+//        System.out.println(drunk3.toString());
 
-        // RandomWalk method 'walk' test
-        System.out.println("---Test of Walk-method---");
+
+ // #9) Collisions
+        System.out.println("\n\t Collisions:");
         for (int i = 0; i < 5; i++) {
-            System.out.println("Walk test #" + i);
-            RandomWalk walk3 = new RandomWalk(10, 200);
-            walk3.walk();
-            System.out.println(walk3.toString());
+            System.out.println("\n-----\t Collision# " + i + "\t-----");
+            Collision collision = new Collision();
+            System.out.println(collision.toString());
         }
-        
-        
-        
-        
-        
-         //#8) Drunken Walks Test
-        System.out.println("\nDrunken Walks");
-        System.out.println("\n-----\t Drunk1 \t-----");
-        DrunkenWalk drunk1 = new DrunkenWalk(10, 200, 30);
-        drunk1.drunkWalks();
-        System.out.println(drunk1.toString());
-
-        System.out.println("\n-----\t Drunk2 \t-----");
-        DrunkenWalk drunk2 = new DrunkenWalk(10, 500, 30);
-        drunk2.drunkWalks();
-        System.out.println(drunk2.toString());
-
-        System.out.println("\n-----\t Drunk3 \t-----");
-        DrunkenWalk drunk3 = new DrunkenWalk(50, 200, 30);
-        drunk3.drunkWalks();
-        System.out.println(drunk3.toString());
         
         
 
