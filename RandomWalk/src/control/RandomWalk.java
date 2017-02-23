@@ -111,6 +111,15 @@ public class RandomWalk {
     }
     
     
+     /**
+     * Simulates a full random walk that continues for as long as the walk is within bounds and has more steps
+     */
+    public void walk() {
+
+        while (moreSteps() == true && inBounds() == true) {
+            takeStep();
+        }
+    }
     
     
     
@@ -118,7 +127,7 @@ public class RandomWalk {
     public String toString() {
         String stringReturn = "";
 
-        stringReturn = "Steps: " + steps + "Pos: (" + x + "," + y + ")";
+        stringReturn = "Steps: " + steps + " Pos: (" + x + "," + y + ")";
 
         return stringReturn;
     }
