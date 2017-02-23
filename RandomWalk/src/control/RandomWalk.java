@@ -5,6 +5,8 @@
  */
 package control;
 
+import java.util.Random;
+
 /**
  *
  * @author maria
@@ -36,6 +38,79 @@ public class RandomWalk {
         steps = 0;
         maxDistance = 0;
     }
+    
+    
+    
+     /**
+     * Generates a pseudo-random value and changes the objects' coordinates accordingly
+     */
+    public void takeStep() {
+
+        //Generates a new random integer between 0 - 4
+        //Depending on the integer, add or substract 1 from x or y
+        Random ran = new Random();
+        int step = ran.nextInt(4);
+
+        switch (step) {
+            case 0:
+                //Right step
+                x = x + 1;
+                break;
+            case 1:
+                //Step up
+                y = y + 1;
+                break;
+            case 2:
+                //step left
+                x = x - 1;
+
+                break;
+
+            case 3:
+                //Step down
+                y = y - 1;
+
+                break;
+        }
+
+        //Increments steps
+        steps = steps + 1;
+        
+    }
+    
+    
+       /**
+     * Returns true if maximum numbers of steps have been reached
+     * @return 
+     */
+    public boolean moreSteps() {
+        boolean returnBool = true;
+
+        if (steps < max) {
+            returnBool = true;
+        } else {
+            returnBool = false;
+        }
+
+        return returnBool;
+    }
+
+    /**
+     * Returns true if coordinates are within the bounds
+     * @return 
+     */
+    public boolean inBounds() {
+        boolean returnBool = false;
+        if (x <= bounds && x >= 0 - bounds && y <= bounds && y >= 0 - bounds) {
+            returnBool = true;
+        } else {
+            returnBool = false;
+        }
+
+        return returnBool;
+    }
+    
+    
     
     
     
